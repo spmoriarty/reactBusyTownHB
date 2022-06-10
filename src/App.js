@@ -2,17 +2,18 @@ import './App.css';
 import React, { useState } from 'react';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
-import { Vehcile } from './Vehicle.js'
+// import { Vehcile } from './Vehicle.js';
 
 
 function App() {
   // track the following state with a few useState hooks:
-  const [alienSize, setAlienSize ] = useState(10)
+  const [alienSize, setAlienSize] = useState(10);
+  const [LizardSize, setLizardSize] = useState(10);
   // lightColor should be a string that starts out as 'red'
-  const [ lightColor, setLightColor] = useState('red');
+  const [lightColor, setLightColor] = useState('red');
 
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
-const [ traffic, setTraffic ] = useState(['car', 'truck'])
+  const [traffic, setTraffic] = useState(['car', 'truck']);
 
 
   return (
