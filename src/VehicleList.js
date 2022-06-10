@@ -1,10 +1,10 @@
 import React from 'react';
 import Vehicle from './Vehicle.js';
 
-export default function VehicleList(props) {
+export default function VehicleList({ vehicles }) {
   return (
     <div className="traffic">
-      {props.Vehicle.map((vehicle, i) => <Vehicle key={vehicle + i} vehicle={vehicle} />)}
+      {vehicles.map((vehicle, i) => <Vehicle key={vehicle + i} vehicle={vehicle} />)}
       
     </div>
   );
