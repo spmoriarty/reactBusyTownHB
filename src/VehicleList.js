@@ -4,7 +4,7 @@ import Vehicle from './Vehicle.js';
 export default function VehicleList(props) {
   return (
     <div className="traffic">
-      {props.Vehicle.map(vehicle, i) => <Vehicle key={vehicle + i} vehicle={vehicle} />
+      {props.Vehicle.map((vehicle, i) => <Vehicle key={vehicle + i} vehicle={vehicle} />)}
       
     </div>
   );
