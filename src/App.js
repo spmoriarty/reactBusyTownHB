@@ -1,13 +1,19 @@
 import './App.css';
+import React, { useState } from 'react';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
+import { Vehcile } from './Vehicle.js'
+
 
 function App() {
   // track the following state with a few useState hooks:
+  const [alienSize, setAlienSize ] = useState(10)
   // lightColor should be a string that starts out as 'red'
-  // lizardSize should be a number that starts out as 10
-  // alienSize should be a number that starts out as 10
+  const [ lightColor, setLightColor] = useState('red');
+
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
+const [ traffic, setTraffic ] = useState(['car', 'truck'])
+
 
   return (
     <div className="App">
@@ -27,7 +33,7 @@ function App() {
           <img src="lizard.png" width={10 * LizardSize} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
-            <button onClick={() => setLizardSize(LizardSize + 1)>Yegads! The lizard is ramping up to its final form!</button>
+            <button onClick={() => setLizardSize(LizardSize + 1)}>Yegads! The lizard is ramping up to its final form!</button>
             {/* when you click this button, the alien's size in state should go up by one */}
             <button onClick={() => setAlienSize(alienSize - 1)}>Oh my! The lizard chomped down on the alien!</button>
           </div>
@@ -38,9 +44,9 @@ function App() {
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button onClick={() => setLightColor ('red')}>Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button onClick={() => setLightColor ('yellow')>Yellow</button>
+        <button onClick={() => setLightColor ('yellow')}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
-        <button onClick={() => setLightColor ('green')>Green</button>
+        <button onClick={() => setLightColor ('green')}>Green</button>
       </div>
       {/* 
       the VehicleList component takes in one prop: vehicles.
