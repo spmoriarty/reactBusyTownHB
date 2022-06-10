@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
-// import { Vehcile } from './Vehicle.js';
+
 
 
 function App() {
